@@ -7,7 +7,7 @@ pipeline{
         
         stage('pull repo'){
             steps {
-                git 'https://github.com/gabrielf/maven-samples.git'
+               
             }
         }
         stage('build'){
