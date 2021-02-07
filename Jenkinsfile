@@ -5,17 +5,17 @@ pipeline{
     
     stages{
         
-        stage ('pull-repo') {
+        stage('pull-repo'){
             steps {
                 git 'https://github.com/gabrielf/maven-samples.git'
             }
         }
-        stage ('build') {
+        stage('build'){
             steps {
                 sh 'mvn clean package'
             }
         }
-        stage ('print') {
+        stage('print'){
            steps {
               sh 'echo $BUILD_ID'
            }
